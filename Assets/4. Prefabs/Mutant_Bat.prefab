@@ -131,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.5}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &6518288659558182867
 MonoBehaviour:
@@ -172,6 +172,8 @@ MonoBehaviour:
   hitboxL: 1
   hitboxW: 1
   damage: 10
+  attackRange: 0
+  enemyClass: 0
 --- !u!114 &186536913517005197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +189,8 @@ MonoBehaviour:
   aggroRange: 10
   speed: 1
   player: {fileID: 6328050523387726380, guid: 096891e2b5754444595124d4b6465033, type: 3}
+  isFlipped: 1
+  move: 1
 --- !u!1 &6518288661149520033
 GameObject:
   m_ObjectHideFlags: 0

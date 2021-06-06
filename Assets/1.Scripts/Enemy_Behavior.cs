@@ -38,35 +38,49 @@ public class Enemy_Behavior : MonoBehaviour
     private void Update()
     {
         //Only acts if the enemy is visible
-        if (GetComponent<Renderer>().isVisible)
+        if (GetComponent<Renderer>().isVisible && !CheckIfDead())
         {
-            if (enemyClass == TYPE.Mook)
-            {
-                gameObject.GetComponent<Enemy_Movement_Behaviour>().MoveMook();
-            }
-            else if (enemyClass == TYPE.Boss)
-            {
-                gameObject.GetComponent<Boss_Movement_Behavior>().MoveBoss();
-            }
+            gameObject.GetComponent<Enemy_Movement_Behaviour>().MoveEnemy();
         }
+
+        if (CheckIfDead())
+        {
+            if (enemyClass == TYPE.Boss)
+            {
+                StartCoroutine(Wait(gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + 3.0f, "Win"));
+            }
+            Destroy(gameObject, gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + 4.0f);
+        }
+
     }
     public void TakeDamage(int damage)
     {
         currentHP -= damage;
+        anim.SetTrigger("isHurt");
+    }
 
-        if(currentHP > 0)
+    private bool CheckIfDead()
+    {
+        if (currentHP > 0)
         {
-            anim.SetTrigger("isHurt");
+            return false;
         }
-        else 
+        else
         {
             anim.SetBool("isDead", true);
-            Destroy(gameObject, gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + 1.0f);
-            if(enemyClass == TYPE.Boss)
-                SceneManager.LoadScene("Win");
+            return true;
         }
+    }
 
+    private IEnumerator Wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+    }
 
+    private IEnumerator Wait(float seconds, string scene)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(scene);
     }
 
 }

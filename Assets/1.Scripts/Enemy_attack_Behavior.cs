@@ -19,14 +19,25 @@ public class Enemy_attack_Behavior : MonoBehaviour
 
     public int damage;
 
+    public int attackRange;
+
+    private enum TYPE
+    {
+        Mook,
+        Boss
+    };
+
+    [SerializeField] private TYPE enemyClass;
+
     public void OnAttack(float distance)
     {
+
         if (gameObject.GetComponent<Enemy_Behavior>().timerForNextAttack > 0)
         {
             gameObject.GetComponent<Enemy_Behavior>().timerForNextAttack -= Time.deltaTime;
         }
 
-        else if (distance <= 2)
+        else if (distance <= attackRange)
         {
             //Checks how many collisions are there
 
@@ -34,7 +45,37 @@ public class Enemy_attack_Behavior : MonoBehaviour
 
             Collider2D[] hits = Physics2D.OverlapBoxAll(hitbox.position, size, 0f, playerLayer);
 
+            if (enemyClass == TYPE.Mook)
+            {
+                anim.SetTrigger("isAttacking");
 
+            }
+
+            else if(enemyClass == TYPE.Boss)
+            {
+
+                //Gets a random value betwen 0-999
+                int randValue = Random.Range(0, 1000);
+
+                if (randValue < 100 && randValue >= 0)
+                {
+                    anim.SetTrigger("attack3");
+                    damage = 40;
+                }
+
+                else if (randValue < 400 && randValue >= 100)
+                {
+                    anim.SetTrigger("attack2");
+                    damage = 30;
+                }
+
+                else if (randValue < 1000 && randValue >= 400)
+                {
+                    anim.SetTrigger("attack1");
+                    damage = 20;
+                }
+
+            }
 
             foreach (Collider2D playerHurtbox in hits)
             {
@@ -43,7 +84,6 @@ public class Enemy_attack_Behavior : MonoBehaviour
                 return;
             }
 
-            anim.SetTrigger("isAttacking");
         }
 
     }

@@ -113,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2.5}
+  m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
 --- !u!50 &7345031086415030478
 Rigidbody2D:
@@ -206,9 +206,6 @@ MonoBehaviour:
   aggroRange: 30
   speed: 1
   player: {fileID: 6328050523387726380, guid: 096891e2b5754444595124d4b6465033, type: 3}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!1 &7345031087527865899
 GameObject:
   m_ObjectHideFlags: 0

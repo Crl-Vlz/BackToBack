@@ -247,8 +247,6 @@ MonoBehaviour:
     m_Bits: 2048
   hitbox: {fileID: 6328050522551954203}
   throwbox: {fileID: 8094388130603713275}
-  hitboxL: 0.5
-  hitboxW: 1
   totalHP: 100
 --- !u!61 &6328050523387726379
 BoxCollider2D:

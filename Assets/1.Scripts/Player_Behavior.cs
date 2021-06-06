@@ -29,6 +29,8 @@ public class Player_Behavior : MonoBehaviour
 
     private int currentHP;
 
+    private bool changedSide;
+
     //Checks if the player is currently on the ground
     private bool IsGrounded()
     {
@@ -43,6 +45,7 @@ public class Player_Behavior : MonoBehaviour
         currentHP = totalHP;
         rgBody = gameObject.GetComponent<Rigidbody2D>();
         box = gameObject.GetComponent<BoxCollider2D>();
+        changedSide = false;
     }
 
     // Update is called once per frame
@@ -51,14 +54,26 @@ public class Player_Behavior : MonoBehaviour
         if (hitbox.position.y <= -8)
             SceneManager.LoadScene("Lose game");
 
+        //Checks the side of the character
+        bool actualSide = changedSide;
+
         //Flips sprite according to direction
         if (Input.GetAxis("Horizontal") < 0f)
         {
             sprite.flipX = true;
+            actualSide = true;
         }
         else if (Input.GetAxis("Horizontal") > 0f)
         {
             sprite.flipX = false;
+            actualSide = false;
+        }
+
+        //Flips the hitbox
+        if (changedSide != actualSide)
+        {
+            gameObject.transform.GetChild(1).localPosition *= -1;
+            changedSide = actualSide;
         }
 
 

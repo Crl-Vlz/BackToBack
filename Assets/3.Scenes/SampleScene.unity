@@ -850,6 +850,11 @@ PrefabInstance:
       propertyPath: damage
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6518288659558182866, guid: eb902de1a085e7644a2c485a76916412,
+        type: 3}
+      propertyPath: hitboxL
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6518288659558182892, guid: eb902de1a085e7644a2c485a76916412,
         type: 3}
       propertyPath: m_Name
