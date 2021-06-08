@@ -5,15 +5,13 @@ using UnityEngine.SceneManagement;
 public class Player_Behavior : MonoBehaviour
 {
 
-    public Animator anim;
+    private Animator anim;
 
-    public SpriteRenderer sprite;
+    private SpriteRenderer sprite;
 
     private Rigidbody2D rgBody;
 
     private BoxCollider2D box;
-
-    public float jumpSpeed =50f;
 
     [SerializeField] private LayerMask groundLayer;
 
@@ -26,6 +24,10 @@ public class Player_Behavior : MonoBehaviour
     public Transform throwbox;
 
     public int totalHP = 100;
+
+    public int walkSpeed;
+
+    public float jumpSpeed = 50f;
 
     private int currentHP;
 
@@ -43,9 +45,13 @@ public class Player_Behavior : MonoBehaviour
     void Start()
     {
         currentHP = totalHP;
-        rgBody = gameObject.GetComponent<Rigidbody2D>();
-        box = gameObject.GetComponent<BoxCollider2D>();
         changedSide = false;
+
+        //Initializes based on components of object
+        rgBody = GetComponent<Rigidbody2D>();
+        box = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -143,7 +149,7 @@ public class Player_Behavior : MonoBehaviour
             anim.SetBool("isJumping", false);
         }
 
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal")*2, 0f, 0f);
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal") * walkSpeed, 0f, 0f);
         transform.position += movement * Time.deltaTime;
     }
 

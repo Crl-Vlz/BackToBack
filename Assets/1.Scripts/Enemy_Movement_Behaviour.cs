@@ -13,7 +13,7 @@ public class Enemy_Movement_Behaviour : MonoBehaviour
 
     public Transform player;
 
-    [SerializeField] bool isFlipped = false;
+    public bool isFlipped = false;
 
     private bool changedSide;
 
@@ -63,7 +63,7 @@ public class Enemy_Movement_Behaviour : MonoBehaviour
                 else
                     sprite.flipX = true;
             }
-            if (player.position.x > transform.position.x)
+            else if (player.position.x > transform.position.x)
             {
                 actualSide = true;
                 moveX = speed * Time.deltaTime;
@@ -75,7 +75,7 @@ public class Enemy_Movement_Behaviour : MonoBehaviour
 
             else
             {
-                gameObject.GetComponent<Animator>().SetBool("isWalking", true);
+                gameObject.GetComponent<Animator>().SetBool("isWalking", false);
             }
 
             //Flips the hitbox

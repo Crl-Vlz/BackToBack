@@ -9,7 +9,7 @@ public class Enemy_attack_Behavior : MonoBehaviour
 
     public Transform hitbox;
 
-    public Animator anim;
+    private Animator anim;
 
     public GameObject player;
 
@@ -17,7 +17,7 @@ public class Enemy_attack_Behavior : MonoBehaviour
 
     public float hitboxW = 1f;
 
-    public int damage;
+    public float damage;
 
     public int attackRange;
 
@@ -28,6 +28,11 @@ public class Enemy_attack_Behavior : MonoBehaviour
     };
 
     [SerializeField] private TYPE enemyClass;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     public void OnAttack(float distance)
     {
@@ -45,6 +50,8 @@ public class Enemy_attack_Behavior : MonoBehaviour
 
             Collider2D[] hits = Physics2D.OverlapBoxAll(hitbox.position, size, 0f, playerLayer);
 
+            float damageMade = damage;;
+
             if (enemyClass == TYPE.Mook)
             {
                 anim.SetTrigger("isAttacking");
@@ -60,26 +67,25 @@ public class Enemy_attack_Behavior : MonoBehaviour
                 if (randValue < 100 && randValue >= 0)
                 {
                     anim.SetTrigger("attack3");
-                    damage = 40;
+                    damageMade *= 2;
                 }
 
                 else if (randValue < 400 && randValue >= 100)
                 {
                     anim.SetTrigger("attack2");
-                    damage = 30;
+                    damageMade *= 1.5f;
                 }
 
                 else if (randValue < 1000 && randValue >= 400)
                 {
                     anim.SetTrigger("attack1");
-                    damage = 20;
                 }
 
             }
 
             foreach (Collider2D playerHurtbox in hits)
             {
-                playerHurtbox.GetComponent<Player_Behavior>().TakeDamage(damage);
+                playerHurtbox.GetComponent<Player_Behavior>().TakeDamage((int)damageMade);
                 gameObject.GetComponent<Enemy_Behavior>().timerForNextAttack = gameObject.GetComponent<Enemy_Behavior>().cooldown;
                 return;
             }

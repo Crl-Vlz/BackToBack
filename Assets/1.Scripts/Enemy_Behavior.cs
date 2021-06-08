@@ -18,9 +18,9 @@ public class Enemy_Behavior : MonoBehaviour
     //HP after damage
     private int currentHP;
 
-    public Animator anim;
+    private Animator anim;
 
-    public SpriteRenderer sprite;
+    private SpriteRenderer sprite;
 
     public TYPE enemyClass;
 
@@ -33,6 +33,10 @@ public class Enemy_Behavior : MonoBehaviour
     {
         currentHP = hp;
         timerForNextAttack = 0;
+
+        //Initializes components based on gameObject
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()

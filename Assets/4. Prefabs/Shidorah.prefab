@@ -233,9 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4be478061a69df4da10bc59b028ac67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 6328050523387726382}
-  sprite: {fileID: 6328050523387726381}
-  jumpSpeed: 550
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -248,6 +245,8 @@ MonoBehaviour:
   hitbox: {fileID: 6328050522551954203}
   throwbox: {fileID: 8094388130603713275}
   totalHP: 100
+  walkSpeed: 2
+  jumpSpeed: 550
 --- !u!61 &6328050523387726379
 BoxCollider2D:
   m_ObjectHideFlags: 0

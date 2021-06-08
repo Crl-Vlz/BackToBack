@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7345031086415030478}
   - component: {fileID: 7345031086415030479}
   - component: {fileID: 7345031086415030321}
-  - component: {fileID: 7345031086415030327}
-  - component: {fileID: 7345031086415030474}
+  - component: {fileID: -6803796644581972239}
+  - component: {fileID: 8171882930230106745}
   m_Layer: 10
   m_Name: Mojo_Jojo
   m_TagString: Enemy
@@ -173,7 +173,7 @@ MonoBehaviour:
   enemyClass: 1
   cooldown: 5
   timerForNextAttack: 0
---- !u!114 &7345031086415030327
+--- !u!114 &-6803796644581972239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7345031086415030476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ef285426353dbb4494cf9bf414efdcf, type: 3}
+  m_Script: {fileID: 11500000, guid: 60d2f60c9edd2a942a4cf7e7191e0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerLayer:
@@ -191,7 +191,12 @@ MonoBehaviour:
   hitbox: {fileID: 7345031087527865898}
   anim: {fileID: 7345031086415030479}
   player: {fileID: 0}
---- !u!114 &7345031086415030474
+  hitboxL: 2
+  hitboxW: 2
+  damage: 20
+  attackRange: 2
+  enemyClass: 1
+--- !u!114 &8171882930230106745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,12 +205,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7345031086415030476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e368f537e0d6746a01dbca3ad9f2b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 44509ed66292f8f458d1133dd3168394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   aggroRange: 30
   speed: 1
-  player: {fileID: 6328050523387726380, guid: 096891e2b5754444595124d4b6465033, type: 3}
+  player: {fileID: 0}
+  isFlipped: 0
+  move: 0
 --- !u!1 &7345031087527865899
 GameObject:
   m_ObjectHideFlags: 0

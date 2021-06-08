@@ -172,7 +172,7 @@ MonoBehaviour:
   hitboxL: 1
   hitboxW: 1
   damage: 10
-  attackRange: 0
+  attackRange: 3
   enemyClass: 0
 --- !u!114 &186536913517005197
 MonoBehaviour:

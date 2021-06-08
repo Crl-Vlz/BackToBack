@@ -64,8 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\1.Scripts\Boss_Attack_Behavior.cs" />
-    <Compile Include="Assets\1.Scripts\Boss_Movement_Behavior.cs" />
     <Compile Include="Assets\1.Scripts\Enemy_Behavior.cs" />
     <Compile Include="Assets\1.Scripts\Enemy_Movement_Behaviour.cs" />
     <Compile Include="Assets\1.Scripts\Enemy_attack_Behavior.cs" />
@@ -608,11 +606,23 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect.Editor">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Editor">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Path.Editor">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -620,26 +630,14 @@
     <Reference Include="Unity.Timeline">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Animation.Triangle.Runtime">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
@@ -647,14 +645,29 @@
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.PixelPerfect">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
@@ -662,23 +675,8 @@
     <Reference Include="Unity.InternalAPIEditorBridge.001">
       <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Users/Guest/Documents/OOP 2021/Back to Back/BackToBack/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
